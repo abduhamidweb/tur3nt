@@ -20,12 +20,20 @@
 //   }
 // }
 // Dark mode start
+// moon
+const moon = document.querySelector('.moon')
+const sun = document.querySelector('.sun')
+moon.addEventListener('click', () => {
+  moon.style.display = 'none'
+  sun.style.display = 'block'
+})
+sun.addEventListener('click', () => {
+  moon.style.display = 'block'
+  sun.style.display = 'none'
+})
 const darkModeBtn = document.getElementById('dark-mode-btn')
 darkModeBtn.addEventListener('click', function () {
-    document.body.classList.toggle('dark-mode')
-
-
-
+  document.body.classList.toggle('dark-mode')
 })
 
 darkModeBtn.addEventListener('click', function () {
@@ -89,38 +97,37 @@ if (localStorage.getItem('dark-mode') === 'on') {
 //   }
 // })
 
-
 // ochilmasin negadir ishlamayabdi.
-    // a.forEach((item) => {
-    //   console.log(item)
-    //   item.classList.add('spanDarkText')
-    // })
-    // $a('.h2DarkText').forEach((item) => {
-    //   item.classList.add('h2DarkText')
-    // })
-    // $a('.h3DarkText').forEach((item) => {
-    //   item.classList.add('h3DarkText')
-    // })
-    // $a('.pDarkText').forEach((item) => {
-    //   item.classList.add('pDarkText')
-    // })
-    // $a('.aDarkText').forEach((item) => {
-    //   item.classList.add('aDarkText')
-    // })
-    // if (!document.body.classList.contains('dark-mode')) {
-    //   $a('.spanDarkText').forEach((item) => {
-    //     item.classList.remove('spanDarkText')
-    //   })
-    //   $a('.h2DarkText').forEach((item) => {
-    //     item.classList.remove('h2DarkText')
-    //   })
-    //   $a('.h3DarkText').forEach((item) => {
-    //     item.classList.remove('h3DarkText')
-    //   })
-    //   $a('.pDarkText').forEach((item) => {
-    //     item.classList.remove('pDarkText')
-    //   })
-    //   $a('.aDarkText').forEach((item) => {
-    //     item.classList.remove('aDarkText')
-    //   })
-    // }
+// a.forEach((item) => {
+//   console.log(item)
+//   item.classList.add('spanDarkText')
+// })
+// $a('.h2DarkText').forEach((item) => {
+//   item.classList.add('h2DarkText')
+// })
+// $a('.h3DarkText').forEach((item) => {
+//   item.classList.add('h3DarkText')
+// })
+// $a('.pDarkText').forEach((item) => {
+//   item.classList.add('pDarkText')
+// })
+// $a('.aDarkText').forEach((item) => {
+//   item.classList.add('aDarkText')
+// })
+// if (!document.body.classList.contains('dark-mode')) {
+//   $a('.spanDarkText').forEach((item) => {
+//     item.classList.remove('spanDarkText')
+//   })
+//   $a('.h2DarkText').forEach((item) => {
+//     item.classList.remove('h2DarkText')
+//   })
+//   $a('.h3DarkText').forEach((item) => {
+//     item.classList.remove('h3DarkText')
+//   })
+//   $a('.pDarkText').forEach((item) => {
+//     item.classList.remove('pDarkText')
+//   })
+//   $a('.aDarkText').forEach((item) => {
+//     item.classList.remove('aDarkText')
+//   })
+// }
