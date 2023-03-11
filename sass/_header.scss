@@ -1,4 +1,9 @@
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    
   background: rgba(23, 25, 29, 0.7);
   .header__wrapper {
     display: flex;
@@ -26,6 +31,7 @@
         text-decoration: none;
       }
       .mail {
+        margin-top: 3px;
         font-family: 'Proxima Nova';
         font-style: normal;
         font-weight: 700;
@@ -95,5 +101,19 @@
   }
   .header2 {
     display: block;
+  }
+  .header2__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0px;
+  }
+  .sm-moon{
+    cursor: pointer;
+  }
+  .sm-sun{
+    display: none;
+    cursor: pointer;
+
   }
 }

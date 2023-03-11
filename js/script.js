@@ -23,30 +23,51 @@
 // moon
 const moon = document.querySelector('.moon')
 const sun = document.querySelector('.sun')
+const smMoon = document.querySelector('.sm-moon')
+const smSun = document.querySelector('.sm-sun')
 moon.addEventListener('click', () => {
   moon.style.display = 'none'
   sun.style.display = 'block'
 })
 sun.addEventListener('click', () => {
-  moon.style.display = 'block'
-  sun.style.display = 'none'
+  smMoon.style.display = 'block'
+  smSun.style.display = 'none'
 })
-const darkModeBtn = document.getElementById('dark-mode-btn')
-darkModeBtn.addEventListener('click', function () {
-  document.body.classList.toggle('dark-mode')
-})
+// sm darkmod
 
-darkModeBtn.addEventListener('click', function () {
-  if (document.body.classList.contains('dark-mode')) {
+smMoon.addEventListener('click', () => {
+  smMoon.style.display = 'none'
+  smSun.style.display = 'block'
+})
+smSun.addEventListener('click', () => {
+  smMoon.style.display = 'block'
+  smSun.style.display = 'none'
+})
+// const darkModeBtn = document.getElementById('dark-mode-btn')
+smMoon.addEventListener('click', function () {
+  document.body.classList.add('dark-moon')
+  document.body.classList.remove('dark-sun')
+})
+smSun.addEventListener('click', function () {
+  document.body.classList.add('dark-sun')
+  document.body.classList.remove('dark-moon')
+})
+smMoon.addEventListener('click', function () {
+  if (document.body.classList.contains('dark-sun')) {
     localStorage.setItem('dark-mode', 'on')
   } else {
     localStorage.setItem('dark-mode', 'off')
   }
 })
-
+smSun.addEventListener('click', function () {
+  if (document.body.classList.contains('dark-sun')) {
+    localStorage.setItem('dark-mode', 'on')
+  } else {
+    localStorage.setItem('dark-mode', 'off')
+  }
+})
 if (localStorage.getItem('dark-mode') === 'on') {
-  document.body.classList.add('dark-mode')
-  darkModeBtn.innerHTML = 'Light Mode'
+  document.body.classList.add('dark-sun')
 }
 // Input validator function
 // let form = document.querySelector('#formRegister')

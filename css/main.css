@@ -23,7 +23,17 @@ body {
   background: url(.png), rgba(17, 19, 23, 0.4);
 }
 
+@media only screen and (max-width: 400px) {
+  .container {
+    max-width: 360px !important;
+    margin: auto;
+  }
+}
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   background: rgba(23, 25, 29, 0.7);
 }
 .header .header__wrapper {
@@ -53,6 +63,7 @@ body {
   text-decoration: none;
 }
 .header .header__item__right .header_item_contact .mail {
+  margin-top: 3px;
   font-family: "Proxima Nova";
   font-style: normal;
   font-weight: 700;
@@ -116,5 +127,18 @@ body {
   }
   .header2 {
     display: block;
+  }
+  .header2__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0px;
+  }
+  .sm-moon {
+    cursor: pointer;
+  }
+  .sm-sun {
+    display: none;
+    cursor: pointer;
   }
 }/*# sourceMappingURL=main.css.map */

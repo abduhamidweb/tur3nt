@@ -1,18 +1,24 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   list-style: none;
 }
-.container{
-max-width: 1270px !important;
-width: 100% !important;
-margin: 0px auto;
+.container {
+  max-width: 1270px !important;
+  width: 100% !important;
+  margin: 0px auto;
 }
-body{
+body {
   background: url(.png), rgba(17, 19, 23, 0.4);
 }
-// .dark-mode { 
+@media only screen and (max-width: 400px) {
+  .container {
+    max-width: 360px !important;
+    margin: auto;
+  }
+}
+// .dark-mode {
 //   background-color: #333333;
 //   color: #ffffff;
 // }
